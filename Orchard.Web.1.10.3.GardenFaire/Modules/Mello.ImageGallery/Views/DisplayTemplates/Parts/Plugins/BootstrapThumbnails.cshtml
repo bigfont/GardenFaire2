@@ -1,0 +1,71 @@
+﻿@using Mello.ImageGallery.Helpers
+@using System.Web.Mvc.Html
+@{ Style.Require("ImageGallery"); }
+@model Mello.ImageGallery.ViewModels.ImageGalleryViewModel
+@using (Script.Head())
+{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            @Html.ImageGalleryScript("#slideshow", Model.ImageGalleryPlugin)
+        });
+    </script>
+
+}
+
+@{
+    int i = 0;
+    int thumbsAcross = 2;
+    string spanX = "span" + (12 / thumbsAcross).ToString();
+    int thumbsFinal = Model.Images.Count() - 1;
+}
+@foreach (var image in Model.Images)
+{
+    if (i == 0)
+    {
+        // start the first row
+        @:<div class="row-fluid">
+            @:<ul class="thumbnails">
+                
+    }
+    else if (i % thumbsAcross == 0)
+    {
+        // end the row
+        // and start a new one     
+            @:</ul>
+        @:</div>
+        @:<div class="row-fluid">
+            @:<ul class="thumbnails">
+    }        
+    
+   
+    // add an item
+    @:<li class="@spanX"><a class="thumbnail" href="@image.PublicUrl" ><img src="@image.Thumbnail.PublicUrl" alt="@image.Caption.ToString()" title="" /></a></li>
+
+    if (i == thumbsFinal)
+    { 
+        // end the row
+            @:</ul>
+        @:</div>
+    }
+
+    ++i;
+
+}
+
+@*    
+<ul id="@Model.ImageGalleryName" class="thumbnails">
+    @foreach (var image in Model.Images) {
+
+    <li class="span2">
+        <a href="@image.PublicUrl" 
+            title="@image.Title" 
+            @Html.ImageGalleryAdditionalAttributes(Model.ImageGalleryPlugin, Model.ImageGalleryName)
+            class="thumbnail">
+            @Html.Image(image)
+        </a>
+    </li>
+
+    }    
+</ul>
+*@

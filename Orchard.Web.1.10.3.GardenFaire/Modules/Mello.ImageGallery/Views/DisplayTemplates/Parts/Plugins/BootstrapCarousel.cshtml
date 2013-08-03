@@ -1,0 +1,44 @@
+﻿@using Mello.ImageGallery.Helpers
+@using System.Web.Mvc.Html
+@{ Style.Require("ImageGallery"); }
+@model Mello.ImageGallery.ViewModels.ImageGalleryViewModel
+@using (Script.Head()) {
+
+<script type="text/javascript">   
+    $(document).ready(function () {
+        @Html.ImageGalleryScript("#slideshow", Model.ImageGalleryPlugin) 
+    });
+</script>
+
+}
+<div class="carousel-outer">
+    <div id="@Model.ImageGalleryName" class="carousel slide" data-interval="false">
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            @{ 
+                int i = 0; 
+                string cssClass;
+            }
+            @foreach (var image in Model.Images) {
+
+                if(i == 0)
+                {
+                    cssClass = "item active";
+                    ++i;
+                }
+                else
+                {
+                    cssClass = "item";
+                }
+
+            <div class="@cssClass">
+                <img src="@image.PublicUrl" alt="" />
+            </div>
+
+            }   
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#@Model.ImageGalleryName" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#@Model.ImageGalleryName" data-slide="next">&rsaquo;</a>
+    </div>
+</div>

@@ -1,0 +1,269 @@
+2019-03-28 19:19:44,093 [7] Orchard.Data.Migration.DataMigrationManager - (null) - An unexpected error occurred while applying migration on Orchard.Framework from version 3. [(null)]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Orchard_Framework_CultureRecord' and the index name 'UC_CR_Name'. The duplicate key value is (en-US).
+Could not create constraint or index. See previous errors.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 380
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 167
+   at Orchard.Data.Migration.Interpreters.AbstractDataMigrationInterpreter.Visit(ISchemaBuilderCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\AbstractDataMigrationInterpreter.cs:line 17
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 57
+   at Orchard.ContentManagement.DataMigrations.FrameworkDataMigration.UpdateFrom3() in C:\Agent2\work\ORCH-Release\src\Orchard\ContentManagement\DataMigrations\FrameworkDataMigration.cs:line 68
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\DataMigrationManager.cs:line 124
+2019-03-28 19:19:44,155 [7] Orchard.Data.Migration.DataMigrationManager - (null) - Error while running migration version 3 for Orchard.Framework. [(null)]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Orchard_Framework_CultureRecord' and the index name 'UC_CR_Name'. The duplicate key value is (en-US).
+Could not create constraint or index. See previous errors.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 380
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 167
+   at Orchard.Data.Migration.Interpreters.AbstractDataMigrationInterpreter.Visit(ISchemaBuilderCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\AbstractDataMigrationInterpreter.cs:line 17
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 57
+   at Orchard.ContentManagement.DataMigrations.FrameworkDataMigration.UpdateFrom3() in C:\Agent2\work\ORCH-Release\src\Orchard\ContentManagement\DataMigrations\FrameworkDataMigration.cs:line 68
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.Runt2019-03-28 19:23:31,685 [7] Orchard.Data.Migration.DataMigrationManager - (null) - An unexpected error occurred while applying migration on Orchard.Framework from version 3. [(null)]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Orchard_Framework_CultureRecord' and the index name 'UC_CR_Name'. The duplicate key value is (en-US).
+Could not create constraint or index. See previous errors.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 380
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 167
+   at Orchard.Data.Migration.Interpreters.AbstractDataMigrationInterpreter.Visit(ISchemaBuilderCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\AbstractDataMigrationInterpreter.cs:line 17
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 57
+   at Orchard.ContentManagement.DataMigrations.FrameworkDataMigration.UpdateFrom3() in C:\Agent2\work\ORCH-Release\src\Orchard\ContentManagement\DataMigrations\FrameworkDataMigration.cs:line 68
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\DataMigrationManager.cs:line 124
+2019-03-28 19:23:31,716 [7] Orchard.Data.Migration.DataMigrationManager - (null) - Error while running migration version 3 for Orchard.Framework. [(null)]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Orchard_Framework_CultureRecord' and the index name 'UC_CR_Name'. The duplicate key value is (en-US).
+Could not create constraint or index. See previous errors.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 380
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 167
+   at Orchard.Data.Migration.Interpreters.AbstractDataMigrationInterpreter.Visit(ISchemaBuilderCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\AbstractDataMigrationInterpreter.cs:line 17
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 57
+   at Orchard.ContentManagement.DataMigrations.FrameworkDataMigration.UpdateFrom3() in C:\Agent2\work\ORCH-Release\src\Orchard\ContentManagement\DataMigrations\FrameworkDataMigration.cs:line 68
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\DataMigrationManager.cs:line 131
+2019-03-28 19:23:31,716 [7] Orchard.Data.Migration.AutomaticDataMigrations - (null) - Could not run migrations automatically on Orchard.Framework [(null)]
+2019-03-28 19:23:31,732 [7] Orchard.Data.Migration.AutomaticDataMigrations - (null) - Could not run migrations automatically on Settings [(null)]
+2019-03-28 19:24:27,902 [1] Orchard.Data.Migration.DataMigrationManager - (null) - An unexpected error occurred while applying migration on Orchard.Framework from version 3. [(null)]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Orchard_Framework_CultureRecord' and the index name 'UC_CR_Name'. The duplicate key value is (en-US).
+Could not create constraint or index. See previous errors.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 380
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 164
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 58
+   at Orchard.ContentManagement.DataMigrations.FrameworkDataMigration.UpdateFrom3() in C:\Agent2\work\ORCH-Release\src\Orchard\ContentManagement\DataMigrations\FrameworkDataMigration.cs:line 76
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\DataMigrationManager.cs:line 124
+2019-03-28 19:24:28,011 [1] Orchard.Data.Migration.DataMigrationManager - (null) - Error while running migration version 3 for Orchard.Framework. [(null)]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Orchard_Framework_CultureRecord' and the index name 'UC_CR_Name'. The duplicate key value is (en-US).
+Could not create constraint or index. See previous errors.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 380
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 164
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 58
+   at Orchard.ContentManagement.DataMigrations.FrameworkDataMigration.UpdateFrom3() in C:\Ag2019-03-28 19:25:58,083 [7] Orchard.Data.Migration.DataMigrationManager - (null) - An unexpected error occurred while applying migration on Orchard.Framework from version 3. [(null)]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Orchard_Framework_CultureRecord' and the index name 'UC_CR_Name'. The duplicate key value is (en-US).
+Could not create constraint or index. See previous errors.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 380
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 167
+   at Orchard.Data.Migration.Interpreters.AbstractDataMigrationInterpreter.Visit(ISchemaBuilderCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\AbstractDataMigrationInterpreter.cs:line 17
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 57
+   at Orchard.ContentManagement.DataMigrations.FrameworkDataMigration.UpdateFrom3() in C:\Agent2\work\ORCH-Release\src\Orchard\ContentManagement\DataMigrations\FrameworkDataMigration.cs:line 68
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\DataMigrationManager.cs:line 124
+2019-03-28 19:25:58,099 [7] Orchard.Data.Migration.DataMigrationManager - (null) - Error while running migration version 3 for Orchard.Framework. [(null)]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Orchard_Framework_CultureRecord' and the index name 'UC_CR_Name'. The duplicate key value is (en-US).
+Could not create constraint or index. See previous errors.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 380
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 167
+   at Orchard.Data.Migration.Interpreters.AbstractDataMigrationInterpreter.Visit(ISchemaBuilderCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\AbstractDataMigrationInterpreter.cs:line 17
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 57
+   at Orchard.ContentManagement.DataMigrations.FrameworkDataMigration.UpdateFrom3() in C:\Agent2\work\ORCH-Release\src\Orchard\ContentManagement\DataMigrations\FrameworkDataMigration.cs:line 68
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.Runtent2\work\ORCH-Release\src\Orchard\ContentManagement\DataMigrations\FrameworkDataMigration.cs:line 76
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\DataMigrationManager.cs:line 131
+2019-03-28 19:24:28,011 [1] Orchard.Data.Migration.AutomaticDataMigrations - (null) - Could not run migrations automatically on Orchard.Framework [(null)]
+2019-03-28 19:24:28,027 [1] Orchard.Data.Migration.AutomaticDataMigrations - (null) - Could not run migrations automatically on Settings [(null)]
+imeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\DataMigrationManager.cs:line 131
+2019-03-28 19:25:58,114 [7] Orchard.Data.Migration.AutomaticDataMigrations - (null) - Could not run migrations automatically on Orchard.Framework [(null)]
+2019-03-28 19:25:58,114 [7] Orchard.Data.Migration.AutomaticDataMigrations - (null) - Could not run migrations automatically on Settings [(null)]
+2019-03-28 19:26:25,758 [9] Orchard.Data.Migration.DataMigrationManager - (null) - An unexpected error occurred while applying migration on Orchard.Framework from version 3. [(null)]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Orchard_Framework_CultureRecord' and the index name 'UC_CR_Name'. The duplicate key value is (en-US).
+Could not create constraint or index. See previous errors.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 380
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 167
+   at Orchard.Data.Migration.Interpreters.AbstractDataMigrationInterpreter.Visit(ISchemaBuilderCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\AbstractDataMigrationInterpreter.cs:line 17
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 57
+   at Orchard.ContentManagement.DataMigrations.FrameworkDataMigration.UpdateFrom3() in C:\Agent2\work\ORCH-Release\src\Orchard\ContentManagement\DataMigrations\FrameworkDataMigration.cs:line 68
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\DataMigrationManager.cs:line 124
+2019-03-28 19:26:25,774 [9] Orchard.Data.Migration.DataMigrationManager - (null) - Error while running migration version 3 for Orchard.Framework. [(null)]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Orchard_Framework_CultureRecord' and the index name 'UC_CR_Name'. The duplicate key value is (en-US).
+Could not create constraint or index. See previous errors.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 380
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 167
+   at Orchard.Data.Migration.Interpreters.AbstractDataMigrationInterpreter.Visit(ISchemaBuilderCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\AbstractDataMigrationInterpreter.cs:line 17
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 57
+   at Orchard.ContentManagement.DataMigrations.FrameworkDataMigration.UpdateFrom3() in C:\Agent2\work\ORCH-Release\src\Orchard\ContentManagement\DataMigrations\FrameworkDataMigration.cs:line 68
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\DataMigrationManager.cs:line 131
+2019-03-28 19:26:25,774 [9] Orchard.Data.Migration.AutomaticDataMigrations - (null) - Could not run migrations automatically on Orchard.Framework [(null)]
+2019-03-28 19:26:25,774 [9] Orchard.Data.Migration.AutomaticDataMigrations - (null) - Could not run migrations automatically on Settings [(null)]
+2019-03-28 19:26:27,508 [7] Orchard.Recipes.Services.RecipeStepExecutor - Default - Recipe execution failed because the step 'Feature' failed. [http://localhost:8080/Packaging/PackagingServices/InstallPackageDetails?redirectUrl=%2FAdmin%2FModules]
+System.InvalidOperationException: Could not enable feature 0 because it was not found.
+   at Orchard.Modules.Recipes.Executors.FeatureStep.Execute(RecipeExecutionContext recipeContext)
+   at Orchard.Recipes.Providers.RecipeHandlers.RecipeExecutionStepHandler.ExecuteRecipeStep(RecipeContext recipeContext)
+   at Orchard.Recipes.Services.RecipeStepExecutor.ExecuteNextStep(String executionId)
+2019-03-28 19:26:28,055 [7] Orchard.Exceptions.DefaultExceptionPolicy - Default - An unexpected exception was caught [http://localhost:8080/Packaging/PackagingServices/InstallPackageDetails?redirectUrl=%2FAdmin%2FModules]
+Orchard.OrchardCoreException: Recipe execution with ID a1e705a9fe3544b88deacdbfe7a06fcd failed because the step 'Feature' failed to execute. The following exception was thrown:
+Could not enable feature 0 because it was not found.
+Refer to the error logs for more information.
+   at Orchard.Recipes.Services.RecipeStepExecutor.ExecuteNextStep(String executionId)
+   at Orchard.Recipes.Services.RecipeScheduler.ExecuteWork(String executionId)
+   at Orchard.Events.DelegateHelper.<>c__DisplayClass14_0`2.<BuildAction>b__0(Object target, Object[] p) in C:\Agent2\work\ORCH-Release\src\Orchard\Events\DelegateHelper.cs:line 116
+   at Orchard.Events.DefaultOrchardEventBus.TryInvokeMethod(IEventHandler eventHandler, Type interfaceType, String messageName, String interfaceName, String methodName, IDictionary`2 arguments, IEnumerable& returnValue) in C:\Agent2\work\ORCH-Release\src\Orchard\Events\DefaultOrchardEventBus.cs:line 83
+   at Orchard.Events.DefaultOrchardEventBus.TryNotifyHandler(IEventHandler eventHandler, String messageName, String interfaceName, String methodName, IDictionary`2 eventData, IEnumerable& returnValue) in C:\Agent2\work\ORCH-Release\src\Orchard\Events\DefaultOrchardEventBus.cs:line 53
+2019-03-28 20:12:54,860 [6] Orchard.Data.Migration.DataMigrationManager - (null) - An unexpected error occurred while applying migration on Orchard.Framework from version 3. [(null)]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Orchard_Framework_CultureRecord' and the index name 'UC_CR_Name'. The duplicate key value is (en-US).
+Could not create constraint or index. See previous errors.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 380
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 167
+   at Orchard.Data.Migration.Interpreters.AbstractDataMigrationInterpreter.Visit(ISchemaBuilderCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\AbstractDataMigrationInterpreter.cs:line 17
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 57
+   at Orchard.ContentManagement.DataMigrations.FrameworkDataMigration.UpdateFrom3() in C:\Agent2\work\ORCH-Release\src\Orchard\ContentManagement\DataMigrations\FrameworkDataMigration.cs:line 68
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\DataMigrationManager.cs:line 124
+2019-03-28 20:12:54,906 [6] Orchard.Data.Migration.DataMigrationManager - (null) - Error while running migration version 3 for Orchard.Framework. [(null)]
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Data.SqlClient.SqlException: The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.Orchard_Framework_CultureRecord' and the index name 'UC_CR_Name'. The duplicate key value is (en-US).
+Could not create constraint or index. See previous errors.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.RunPendingStatements() in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 380
+   at Orchard.Data.Migration.Interpreters.DefaultDataMigrationInterpreter.Visit(AlterTableCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\DefaultDataMigrationInterpreter.cs:line 167
+   at Orchard.Data.Migration.Interpreters.AbstractDataMigrationInterpreter.Visit(ISchemaBuilderCommand command) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Interpreters\AbstractDataMigrationInterpreter.cs:line 17
+   at Orchard.Data.Migration.Schema.SchemaBuilder.AlterTable(String name, Action`1 table) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\Schema\SchemaBuilder.cs:line 57
+   at Orchard.ContentManagement.DataMigrations.FrameworkDataMigration.UpdateFrom3() in C:\Agent2\work\ORCH-Release\src\Orchard\ContentManagement\DataMigrations\FrameworkDataMigration.cs:line 68
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Data.Migration.DataMigrationManager.Update(String feature) in C:\Agent2\work\ORCH-Release\src\Orchard\Data\Migration\DataMigrationManager.cs:line 131
+2019-03-28 20:12:54,906 [6] Orchard.Data.Migration.AutomaticDataMigrations - (null) - Could not run migrations automatically on Orchard.Framework [(null)]
+2019-03-28 20:12:54,906 [6] Orchard.Data.Migration.AutomaticDataMigrations - (null) - Could not run migrations automatically on Settings [(null)]

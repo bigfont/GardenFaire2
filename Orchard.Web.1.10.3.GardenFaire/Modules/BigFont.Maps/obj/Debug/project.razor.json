@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\dev\\bigfont\\GardenFaire2\\Orchard.Source.1.6\\src\\Orchard.Web\\Modules\\BigFont.Maps\\BigFont.Maps.csproj",
+  "TargetFramework": "v4.0",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
